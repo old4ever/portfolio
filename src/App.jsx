@@ -1,26 +1,57 @@
-import { useState } from "react";
+import Navbar from "./components/Navbar";
+import LinksButtonsList from "./components/LinksButtonsList";
+import Avatar from "./components/Avatar";
+import ListIcon from "../public/list.svg";
+import { useEffect, useState } from "react";
 
 function App() {
-  const [darkMode, setDarkMode] = useState(true);
+  const [darkMode, setDarkMode] = useState("true");
+
+  useEffect(() => {
+    const storageDarkMode = JSON.parse(localStorage.getItem("darkmode"));
+    setDarkMode(storageDarkMode);
+
+    if (storageDarkMode === false) {
+      itsLight();
+    } else {
+      itsDark();
+    }
+  }, []);
+
+  const itsDark = () => {
+    if (!document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.add("dark");
+    }
+  };
+
+  const itsLight = () => {
+    if (document.documentElement.classList.contains("dark")) {
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  const handleDarkModeClick = (darkModeState) => {
+    darkModeState = JSON.parse(darkModeState);
+    switch (true) {
+      case darkModeState === true:
+        itsLight();
+        setDarkMode(false);
+        localStorage.setItem("darkmode", JSON.stringify(false));
+
+        break;
+      case darkModeState === false:
+        itsDark();
+        setDarkMode(true);
+        localStorage.setItem("darkmode", JSON.stringify(true));
+
+      default:
+        break;
+    }
+  };
 
   return (
     <>
-      <div className="dark:text-white p-[20px] text-center">
-        <a
-          href="/"
-          className="router-link-active router-link-exact-active font-bold"
-        >
-          Home
-        </a>
-        {" | "}
-        <a href="/links" className="font-bold">
-          Links
-        </a>
-        {" | "}
-        <a href="/about" className="font-bold">
-          About me
-        </a>
-      </div>
+      <Navbar darkModeHandler={() => handleDarkModeClick(darkMode)} />
       <div className="z-0">
         <div className="min-h-[90vh] flex flex-col justify-center items-center">
           <div className="flex flex-col px-10 md:px-36 md:grid md:grid-rows-none md:grid-cols-3 justify-center">
@@ -36,89 +67,20 @@ function App() {
                 <span className="dark:text-white fancy">{"old4ever"}</span>
               </h1>
 
-              <div
-                name="links"
-                className="flex justify-center md:justify-start"
-              >
-                <div className="flex flex-row flex-wrap justify-center md:justify-start my-3">
-                  <div>
-                    <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="bg-white">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                          <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                          <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                        </svg>
-                      </i>
-                    </button>
-                  </div>
-                  <div>
-                    <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="bg-white">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                          <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                          <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                        </svg>
-                      </i>
-                    </button>
-                  </div>
-                  <div>
-                    <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="bg-white">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                          <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                          <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                        </svg>
-                      </i>
-                    </button>
-                  </div>
-                  <div>
-                    <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="bg-white">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="16"
-                          height="16"
-                          viewBox="0 0 16 16"
-                        >
-                          <path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5z" />
-                          <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2z" />
-                          <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1H1z" />
-                        </svg>
-                      </i>
-                    </button>
-                  </div>
-                </div>
-              </div>
+              <LinksButtonsList
+                icons={[
+                  {
+                    icon: ListIcon,
+                    link: "https://google.com",
+                  },
+                ]}
+              />
             </div>
             <div
               name="center"
               className="-order-3 md:-order-2 mb-5 md:mx-10 md:mb-0 text-center md:grid md:place-content-center"
             >
-              <div name="avatar">
-                <img
-                  src="../ava.jpg"
-                  alt="avatar"
-                  className="rounded-full inline"
-                />
-              </div>
+              <Avatar />
             </div>
             <div
               name="right"
@@ -150,11 +112,19 @@ function App() {
           </div>
         </div>
       </div>
-      <img
-        src="../bg.jpg"
-        className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
-        style={{ overflowClipMargin: "content-box" }}
-      ></img>
+      {darkMode ? (
+        <img
+          src="../bg.jpg"
+          id="background-dark"
+          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
+          style={{ overflowClipMargin: "content-box" }}
+        ></img>
+      ) : (
+        <div
+          id="background-light"
+          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
+        ></div>
+      )}
     </>
   );
 }
