@@ -43,7 +43,7 @@ function App() {
                 <div class="flex flex-row flex-wrap justify-center md:justify-start my-3">
                   <div>
                     <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="text-white dark:text-black">
+                      <i className="bg-white dark:bg-black">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -59,7 +59,7 @@ function App() {
                   </div>
                   <div>
                     <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="text-white dark:text-black">
+                      <i className="bg-white dark:bg-black">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -75,7 +75,7 @@ function App() {
                   </div>
                   <div>
                     <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="text-white dark:text-black">
+                      <i className="bg-white dark:bg-black">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
@@ -91,7 +91,7 @@ function App() {
                   </div>
                   <div>
                     <button className="btn btn-circle m-1 bg-black dark:bg-white ">
-                      <i className="text-white dark:text-black">
+                      <i className="bg-white dark:bg-black">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
