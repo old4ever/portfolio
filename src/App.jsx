@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import LinksButtonsList from "./components/LinksButtonsList";
 import Avatar from "./components/Avatar";
 import ListIcon from "../public/list.svg";
+import GithubIcon from "../public/github.svg";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -70,8 +71,8 @@ function App() {
               <LinksButtonsList
                 icons={[
                   {
-                    icon: ListIcon,
-                    link: "https://google.com",
+                    icon: GithubIcon,
+                    link: "https://github.com/old4ever",
                   },
                 ]}
               />
