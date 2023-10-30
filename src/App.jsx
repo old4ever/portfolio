@@ -1,8 +1,7 @@
 import Navbar from "./components/Navbar";
 import LinksButtonsList from "./components/LinksButtonsList";
 import Avatar from "./components/Avatar";
-import ListIcon from "../public/list.svg";
-import GithubIcon from "../public/github.svg";
+import GithubIcon from "./github.svg";
 import { useEffect, useState } from "react";
 
 function App() {
@@ -115,7 +114,7 @@ function App() {
       </div>
       {darkMode ? (
         <img
-          src="../bg.jpg"
+          src="/src/bg.jpg"
           id="background-dark"
           className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
           style={{ overflowClipMargin: "content-box" }}

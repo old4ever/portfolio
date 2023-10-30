@@ -1,7 +1,7 @@
 const Avatar = () => {
   return (
     <div name="avatar">
-      <img src="../ava.jpg" alt="avatar" className="rounded-full inline" />
+      <img src="/src/ava.jpg" alt="avatar" className="rounded-full inline" />
     </div>
   );
 };
