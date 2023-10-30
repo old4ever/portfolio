@@ -40,7 +40,7 @@ function App() {
                 name="links"
                 className="flex justify-center md:justify-start"
               >
-                <div class="flex flex-row flex-wrap justify-center md:justify-start my-3">
+                <div className="flex flex-row flex-wrap justify-center md:justify-start my-3">
                   <div>
                     <button className="btn btn-circle m-1 bg-black dark:bg-white ">
                       <i className="bg-white">
@@ -127,7 +127,8 @@ function App() {
               <div className="border-l-2 md:border-l-0 md:border-r-2 py-2 pl-4 md:pl-0 md:pr-4 md:text-right">
                 <p className="text-sm mb-2 dark:text-white">
                   A beginner fullstack <i>(but mostly front-end)</i> developer.
-                  You can find the list of my projects on my Github page and in{" "}
+                  You can find the list of my projects on my Github page and in
+                  the{" "}
                   {
                     <a
                       href="/links"
@@ -142,8 +143,8 @@ function App() {
                   arch user btw
                 </p>
               </div>
-              <div class="flex flex-wrap items-start gap-2 justify-end">
-                <button class="link dark:text-white">Learn more→</button>
+              <div className="flex flex-wrap items-start gap-2 justify-end">
+                <button className="link dark:text-white">Learn more→</button>
               </div>
             </div>
           </div>
