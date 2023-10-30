@@ -1,3 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --accent-color: #e5a849;
+}
+
+.fancy {
+  background-image: -webkit-linear-gradient(
+    315deg,
+    rgb(66, 211, 146) 25%,
+    rgb(100, 126, 255)
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-circle {
+  border-radius: 9999px;
+}
+
+.btn {
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+  text-align: center;
+  height: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  min-height: 3rem;
+  font-size: 0.875rem;
+  line-height: 1em;
+  gap: 0.5rem;
+  font-weight: 600;
+  text-decoration-line: none;
+}
+
+div {
+  font-family: Fragment Mono, "Noto Serif SC", monospace;
+}
+.link {
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.inline-link {
+  cursor: pointer;
+}
+
+.bi:before,
+[class*=" bi-"]:before,
+[class^="bi-"]:before {
+  display: inline-block;
+  font-family: bootstrap-icons !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  vertical-align: -0.125em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.router-link-exact-active {
+  color: var(--accent-color);
+}
+
+.accent-color {
+  color: var(--accent-color);
+}
+
+.accent-color-bg {
+  background-color: var(--accent-color);
+}
+
+:is(.dark .dark\:accent-color) {
+  color: var(--accent-color);
+}
+
+:is(.dark .dark\:accent-color-bg) {
+  background-color: var(--accent-color);
+}
