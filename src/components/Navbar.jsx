@@ -1,21 +1,23 @@
+import { Link } from "react-router-dom";
+
 const Navbar = ({ darkModeHandler }) => {
   return (
     <div className="dark:text-white p-[20px] flex">
       <div className="ml-auto">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="router-link-active router-link-exact-active font-bold"
         >
           Home
-        </a>
+        </Link>
         {" | "}
-        <a href="/links" className="font-bold">
+        <Link to="/links" className="font-bold">
           Links
-        </a>
+        </Link>
         {" | "}
-        <a href="/about" className="font-bold">
+        <Link to="/about" className="font-bold">
           About me
-        </a>
+        </Link>
       </div>
       <button onClick={darkModeHandler} className="ml-auto">
         
