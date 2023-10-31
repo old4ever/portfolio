@@ -4,6 +4,7 @@
 
 :root {
   --accent-color: #e5a849;
+  --dark-accent-color: #00a2ff;
 }
 
 .fancy {
@@ -71,15 +72,19 @@ div {
 }
 
 .router-link-exact-active {
+  color: var(--dark-accent-color);
+}
+
+:is(.dark .dark\:router-link-exact-active) {
   color: var(--accent-color);
 }
 
 .accent-color {
-  color: var(--accent-color);
+  color: var(--dark-accent-color);
 }
 
 .accent-color-bg {
-  background-color: var(--accent-color);
+  background-color: var(--dark-accent-color);
 }
 
 :is(.dark .dark\:accent-color) {

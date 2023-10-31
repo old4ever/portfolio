@@ -4,8 +4,11 @@ import LinkCard from "./LinkCard";
 const LinksPage = () => {
   useEffect(() => {
     const navbar = document.querySelector("#navbar-links");
+    navbar.children.about.classList.remove("dark:router-link-exact-active");
     navbar.children.about.classList.remove("router-link-exact-active");
+    navbar.children.links.classList.add("dark:router-link-exact-active");
     navbar.children.links.classList.add("router-link-exact-active");
+    navbar.children.home.classList.remove("dark:router-link-exact-active");
     navbar.children.home.classList.remove("router-link-exact-active");
   }, []);
 

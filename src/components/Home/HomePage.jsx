@@ -10,8 +10,11 @@ import { Instagram } from "react-bootstrap-icons";
 const HomePage = () => {
   useEffect(() => {
     const navbar = document.querySelector("#navbar-links");
+    navbar.children.about.classList.remove("dark:router-link-exact-active");
     navbar.children.about.classList.remove("router-link-exact-active");
+    navbar.children.links.classList.remove("dark:router-link-exact-active");
     navbar.children.links.classList.remove("router-link-exact-active");
+    navbar.children.home.classList.add("dark:router-link-exact-active");
     navbar.children.home.classList.add("router-link-exact-active");
   }, []);
 
@@ -64,7 +67,7 @@ const HomePage = () => {
               {
                 <a
                   href="/links"
-                  className="dark:accent-color-bg dark:text-black rounded-md px-2 inline-link"
+                  className="dark:text-black text-white rounded-md px-2 inline-link accent-color-bg dark:accent-color-bg"
                 >
                   Links
                 </a>

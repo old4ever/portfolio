@@ -3,8 +3,11 @@ import { useEffect } from "react";
 const AboutPage = () => {
   useEffect(() => {
     const navbar = document.querySelector("#navbar-links");
+    navbar.children.about.classList.add("dark:router-link-exact-active");
     navbar.children.about.classList.add("router-link-exact-active");
+    navbar.children.links.classList.remove("dark:router-link-exact-active");
     navbar.children.links.classList.remove("router-link-exact-active");
+    navbar.children.home.classList.remove("dark:router-link-exact-active");
     navbar.children.home.classList.remove("router-link-exact-active");
   }, []);
 

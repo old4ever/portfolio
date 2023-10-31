@@ -72,7 +72,7 @@ function App() {
       ) : (
         <div
           id="background-light"
-          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%] bg-purple-200"
+          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%] bg-cyan-100"
         ></div>
       )}
     </>
