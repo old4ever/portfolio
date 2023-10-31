@@ -62,7 +62,7 @@ function App() {
       </div>
       {darkMode ? (
         <img
-          src="/src/bg.jpg"
+          src="/src/assets/bg.jpg"
           id="background-dark"
           className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
           style={{ overflowClipMargin: "content-box" }}

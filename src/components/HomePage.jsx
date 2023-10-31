@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import LinksButtonsList from "./LinksButtonsList";
 import Avatar from "./Avatar";
-import GithubIcon from "../github.svg";
-import InstagramIcon from "../instagram.svg";
+import GithubIcon from "../assets/github.svg";
+import InstagramIcon from "../assets/instagram.svg";
 
 const HomePage = () => {
   useEffect(() => {
