@@ -1,7 +1,8 @@
 import Navbar from "./components/Navbar";
-import HomePage from "./components/HomePage";
-import LinksPage from "./components/LinksPage";
-import AboutPage from "./components/AboutPage";
+import HomePage from "./components/Home/HomePage";
+import LinksPage from "./components/Links/LinksPage";
+import AboutPage from "./components/About/AboutPage";
+import BackgroundDark from "./assets/bg.jpg";
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 
@@ -61,12 +62,13 @@ function App() {
         </Routes>
       </div>
       {darkMode ? (
-        <img
-          src="/src/assets/bg.jpg"
-          id="background-dark"
-          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%]"
-          style={{ overflowClipMargin: "content-box" }}
-        ></img>
+        <div
+          className="fixed z-[-1000] bottom-0 left-0 block align-middle overflow-clip w-[100%] h-[100%]"
+          style={{
+            background: `url(${BackgroundDark}) no-repeat center fixed`,
+            backgroundSize: "cover",
+          }}
+        ></div>
       ) : (
         <div
           id="background-light"

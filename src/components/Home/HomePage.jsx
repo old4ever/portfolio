@@ -2,8 +2,10 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import LinksButtonsList from "./LinksButtonsList";
 import Avatar from "./Avatar";
-import GithubIcon from "../assets/github.svg";
-import InstagramIcon from "../assets/instagram.svg";
+
+import { Github } from "react-bootstrap-icons";
+import { Twitter } from "react-bootstrap-icons";
+import { Instagram } from "react-bootstrap-icons";
 
 const HomePage = () => {
   useEffect(() => {
@@ -31,12 +33,16 @@ const HomePage = () => {
           <LinksButtonsList
             icons={[
               {
-                icon: GithubIcon,
-                link: "https://www.github.com/old4ever",
+                icon: <Github />,
+                link: "https://github.com/old4ever",
               },
               {
-                icon: InstagramIcon,
-                link: "https://www.instagram.com/dm_stanchev/",
+                icon: <Instagram />,
+                link: "https://instagram.com/dm_stanchev/",
+              },
+              {
+                icon: <Twitter />,
+                link: "https://twitter.com/old4ever",
               },
             ]}
           />
