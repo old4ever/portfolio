@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import LinkCard from "./LinkCard";
+import Flixx from "../../assets/flixx-main-page.png";
 
 const LinksPage = () => {
   useEffect(() => {
@@ -16,8 +17,13 @@ const LinksPage = () => {
     <>
       <div className="flex flex-row justify-center ">
         <div className="flex flex-col justify-center">
-          <div className="grid auto-rows-[6rem] grid-cols-3 gap-4 max-w-4xl mx-10 my-10 dark:text-white">
-            <LinkCard doubled={true} vertical={true} button={true} />
+          <div className="grid auto-rows-[6rem] grid-cols-3 gap-4 max-w-4xl mx-10 my-10 dark:text-white min-w-[20rem] sm:min-w-[30rem] lg:min-w-[40rem]">
+            <LinkCard
+              doubled={true}
+              vertical={true}
+              button={true}
+              img={{ small: Flixx, medium: "", large: "" }}
+            />
             <LinkCard button={true} />
             <LinkCard button={true} />
             <LinkCard />
