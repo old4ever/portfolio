@@ -21,13 +21,21 @@ const LinksPage = () => {
             <LinkCard
               doubled={true}
               vertical={true}
-              button={true}
+              button={{ exists: true, link: "https://flixx.old4ever.cyou" }}
               img={{ small: Flixx, medium: "", large: "" }}
+              text={"Flixx"}
             />
-            <LinkCard button={true} />
-            <LinkCard button={true} />
-            <LinkCard />
-            <LinkCard doubled={true} />
+            <LinkCard button={{ exists: true, link: "" }} />
+            <LinkCard button={{ exists: true, link: "" }} />
+            <LinkCard button={{ exists: true, link: "" }} />
+            <LinkCard
+              doubled={true}
+              text={"Tracalorie"}
+              button={{
+                exists: true,
+                link: "https://tracalorie.old4ever.cyou",
+              }}
+            />
           </div>
         </div>
       </div>

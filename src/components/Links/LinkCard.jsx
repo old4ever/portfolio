@@ -1,6 +1,11 @@
 import { ArrowRightCircleFill } from "react-bootstrap-icons";
 
-const LinkCard = ({ doubled, vertical, button, img }) => {
+const LinkCard = ({ doubled, vertical, button, img, text }) => {
+  if (!text) {
+    text = `This is a ${doubled ? "doubled" : ""} ${
+      vertical ? "vertical" : ""
+    } card`;
+  }
   return (
     <div
       className={`relative rounded-xl border-2 border-slate-400/10 dark:hover:border-slate-100/20 bg-neutral-100 p-4 dark:bg-neutral-900  ${
@@ -16,12 +21,17 @@ const LinkCard = ({ doubled, vertical, button, img }) => {
         }
       }
     >
-      <div className="absolute bottom-0 left-0">{`This is a ${
-        doubled ? "doubled" : ""
-      } ${vertical ? "vertical" : ""} card`}</div>
+      <div className="absolute bottom-0 left-0">{text}</div>
 
-      {button && (
-        <button className="absolute bottom-0 right-0 px-3 py-3 text-[1.5rem]">
+      {button.exists && (
+        <button
+          onClick={() => {
+            if (button.link) {
+              window.open(button.link, "_blank");
+            }
+          }}
+          className="absolute bottom-0 right-0 px-3 py-3 text-[1.5rem]"
+        >
           <ArrowRightCircleFill />
         </button>
       )}

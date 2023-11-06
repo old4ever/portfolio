@@ -5,7 +5,7 @@ const LinkButton = ({ icon, link }) => {
         onClick={() => window.open(link, "_blank")}
         className="btn btn-circle m-1 bg-black dark:bg-white "
       >
-        <i className="bg-white">{icon}</i>
+        <i>{icon}</i>
       </button>
     </>
   );

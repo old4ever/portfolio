@@ -36,15 +36,15 @@ const HomePage = () => {
           <LinksButtonsList
             icons={[
               {
-                icon: <Github />,
+                icon: <Github className="fill-white dark:fill-black" />,
                 link: "https://github.com/old4ever",
               },
               {
-                icon: <Instagram />,
+                icon: <Instagram className="fill-white dark:fill-black" />,
                 link: "https://instagram.com/dm_stanchev/",
               },
               {
-                icon: <Twitter />,
+                icon: <Twitter className="fill-white dark:fill-black" />,
                 link: "https://twitter.com/old4ever",
               },
             ]}
