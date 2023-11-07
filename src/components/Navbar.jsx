@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Moon } from "react-bootstrap-icons";
 
 const Navbar = ({ darkModeHandler }) => {
   return (
@@ -17,7 +18,7 @@ const Navbar = ({ darkModeHandler }) => {
         </Link>
       </div>
       <button onClick={darkModeHandler} className="ml-auto">
-        
+        <Moon />
       </button>
     </div>
   );
