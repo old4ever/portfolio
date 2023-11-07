@@ -65,12 +65,12 @@ const HomePage = () => {
               A beginner fullstack <i>(but mostly front-end)</i> developer. You
               can find the list of my projects on my Github page and in the{" "}
               {
-                <a
-                  href="/links"
+                <Link
+                  to="/links"
                   className="dark:text-black text-white rounded-md px-2 inline-link accent-color-bg dark:accent-color-bg"
                 >
                   Links
-                </a>
+                </Link>
               }{" "}
               section.
             </p>
