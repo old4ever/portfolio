@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import LinkCard from "./LinkCard";
-import Flixx from "../../assets/flixx-main-page.png";
 
 const LinksPage = () => {
   useEffect(() => {
@@ -22,7 +21,7 @@ const LinksPage = () => {
               doubled={true}
               vertical={true}
               button={{ exists: true, link: "https://flixx.old4ever.cyou" }}
-              img={{ small: Flixx, medium: "", large: "" }}
+              img={"flixx"}
               text={"Flixx"}
             />
             <LinkCard button={{ exists: true, link: "" }} />
