@@ -19,18 +19,16 @@ const LinkCard = ({ doubled, vertical, button, img, text }) => {
       } ${
         vertical ? "row-span-2 xl:row-span-4 " : "row-span-1 xl:row-span-2 "
       } bg-cover bg-no-repeat ${images[img] ? images[img] : ""}`}
+      onClick={() => {
+        if (button.link) {
+          window.open(button.link, "_blank");
+        }
+      }}
     >
       <div className="absolute bottom-0 left-0">{images[img] ? "" : text}</div>
 
       {button.exists && (
-        <button
-          onClick={() => {
-            if (button.link) {
-              window.open(button.link, "_blank");
-            }
-          }}
-          className="absolute bottom-0 right-0 px-3 py-3 text-[1.5rem]"
-        >
+        <button className="absolute bottom-0 right-0 px-3 py-3 text-[1.5rem]">
           <ArrowRightCircleFill />
         </button>
       )}
