@@ -8,12 +8,10 @@ const LinkCard = ({ doubled, vertical, button, img, text }) => {
   }
   const images = {
     flixx: [
-      "sm:bg-flixx-small md:bg-flixx-medium lg:bg-flixx-large xl:bg-flixx-big",
+      "bg-flixx-small sm:bg-flixx-medium lg:bg-flixx-large xl:bg-flixx-big",
     ],
   };
-  if (!img) {
-  } else {
-  }
+
   return (
     <div
       className={`relative rounded-xl border-2 border-slate-400/10 dark:hover:border-slate-100/20 bg-neutral-100 p-4 dark:bg-neutral-900  ${
@@ -22,7 +20,7 @@ const LinkCard = ({ doubled, vertical, button, img, text }) => {
         vertical ? "row-span-2 xl:row-span-4 " : "row-span-1 xl:row-span-2 "
       } bg-cover bg-no-repeat ${images[img] ? images[img] : ""}`}
     >
-      <div className="absolute bottom-0 left-0">{text}</div>
+      <div className="absolute bottom-0 left-0">{images[img] ? "" : text}</div>
 
       {button.exists && (
         <button
