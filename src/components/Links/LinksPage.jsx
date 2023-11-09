@@ -15,8 +15,8 @@ const LinksPage = () => {
   return (
     <>
       <div className="flex flex-row justify-center ">
-        <div className="flex flex-col justify-center">
-          <div className="grid auto-rows-[6rem] grid-cols-3 gap-4 max-w-4xl mx-10 my-10 dark:text-white min-w-[20rem] sm:min-w-[30rem] lg:min-w-[40rem]">
+        <div className="flex flex-col  mx-10 justify-center">
+          <div className="mx-10 my-10 grid min-w-[20rem] max-w-4xl auto-rows-[6rem] grid-cols-3 gap-4 dark:text-white sm:min-w-[30rem] lg:min-w-[40rem]">
             <LinkCard
               doubled={true}
               vertical={true}

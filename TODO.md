@@ -1,5 +1,9 @@
 # AboutPage component:
 
-- Update LinkedIn link with correct link
-- Add styles to links to indicate interactivity
-- (optional) Adjust font to be more readable
+- [] Update LinkedIn link with correct link
+- [x] Add styles to links to indicate interactivity
+- [] (optional) Adjust font to be more readable
+
+# Links component:
+
+- [x] Remove arrows on mobile (sm breakpoint???)

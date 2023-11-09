@@ -63,7 +63,7 @@ function App() {
       </div>
       {darkMode ? (
         <div
-          className="fixed z-[-1000] bottom-0 left-0 block align-middle overflow-clip w-[100%] h-[100%]"
+          className="fixed bottom-0 left-0 z-[-1000] block h-[100%] w-[100%] overflow-clip align-middle"
           style={{
             background: `url(${BackgroundDark}) no-repeat center fixed`,
             backgroundSize: "cover",
@@ -72,7 +72,7 @@ function App() {
       ) : (
         <div
           id="background-light"
-          className="fixed z-[-1000] top-0 left-0 block align-middle overflow-clip  h-[100%] w-[100%] bg-cyan-100"
+          className="fixed left-0 top-0 z-[-1000] block h-[100%] w-[100%]  overflow-clip bg-cyan-100 align-middle"
         ></div>
       )}
     </>

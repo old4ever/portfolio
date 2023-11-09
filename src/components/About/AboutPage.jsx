@@ -76,7 +76,7 @@ const AboutPage = () => {
         </ul>
         <h1 className="text-xl pb-4 pt-8">My Portfolio</h1>
         <p>
-          Take a look at <Link to="/links">my portfolio</Link> to see some of
+          Take a look at <Link className="underline-offset-[0.25em] text-blue-500 underline" to="/links">my portfolio</Link> to see some of
           the projects I've been working on. Each project represents a unique
           challenge and a valuable learning experience. I'm excited to continue
           building and refining my skills and to share my journey with you.
@@ -87,11 +87,11 @@ const AboutPage = () => {
           anyone who shares my passion for the web. If you're interested in
           collaborating on a project, have questions, or just want to chat, feel
           free to reach out to me. You can find me on LinkedIn and{" "}
-          <a href="https://github.com/old4ever" target="_blank">
+          <a className="underline-offset-[0.25em] text-blue-500 underline" href="https://github.com/old4ever" target="_blank">
             GitHub
           </a>
           , or drop me an email at{" "}
-          <a href="mailto:contact@old4ever.cyou">contact@old4ever.cyou</a>.
+          <a className="underline-offset-[0.25em] text-blue-500 underline" href="mailto:contact@old4ever.cyou">contact@old4ever.cyou</a>.
         </p>
         <p>
           Thank you for visiting my portfolio, and I look forward to the
