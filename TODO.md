@@ -1,6 +1,6 @@
 # AboutPage component:
 
-- [] Update LinkedIn link with correct link
+- [x] Update LinkedIn link with correct link
 - [x] Add styles to links to indicate interactivity
 - [] (optional) Adjust font to be more readable
 

@@ -6,6 +6,7 @@ import Avatar from "./Avatar";
 import { Github } from "react-bootstrap-icons";
 import { Twitter } from "react-bootstrap-icons";
 import { Instagram } from "react-bootstrap-icons";
+import { Linkedin } from "react-bootstrap-icons";
 
 const HomePage = () => {
   useEffect(() => {
@@ -45,6 +46,9 @@ const HomePage = () => {
               },
               {
                 icon: <Twitter className="fill-white dark:fill-black" />,
+                link: "https://twitter.com/old4ever",
+              }, {
+                icon: <Linkedin className="fill-white dark:fill-black" />,
                 link: "https://twitter.com/old4ever",
               },
             ]}

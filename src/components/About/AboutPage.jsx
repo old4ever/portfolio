@@ -86,7 +86,11 @@ const AboutPage = () => {
           I'm always eager to connect with fellow developers, designers, and
           anyone who shares my passion for the web. If you're interested in
           collaborating on a project, have questions, or just want to chat, feel
-          free to reach out to me. You can find me on LinkedIn and{" "}
+          free to reach out to me. You can find me on {" "}
+          <a className="underline-offset-[0.25em] text-blue-500 underline" href="https://linkedin.com/in/dmytro-stanchiev/" target="_blank">
+            LinkedIn
+          </a>{" "}and{" "}
+
           <a className="underline-offset-[0.25em] text-blue-500 underline" href="https://github.com/old4ever" target="_blank">
             GitHub
           </a>
