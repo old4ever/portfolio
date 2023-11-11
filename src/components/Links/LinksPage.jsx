@@ -23,6 +23,7 @@ const LinksPage = () => {
               button={{ exists: true, link: "https://flixx.old4ever.cyou" }}
               img={"flixx"}
               text={"Flixx"}
+              buttonDark={false}
             />
             <LinkCard button={{ exists: true, link: "" }} />
             <LinkCard button={{ exists: true, link: "" }} />
