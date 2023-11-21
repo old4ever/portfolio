@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import LinksButtonsList from "./LinksButtonsList";
 import Avatar from "./Avatar";
@@ -47,9 +47,10 @@ const HomePage = () => {
               {
                 icon: <Twitter className="fill-white dark:fill-black" />,
                 link: "https://twitter.com/old4ever",
-              }, {
+              },
+              {
                 icon: <Linkedin className="fill-white dark:fill-black" />,
-                link: "https://twitter.com/old4ever",
+                link: "https://linkedin.com/in/dmytro-stanchiev/",
               },
             ]}
           />

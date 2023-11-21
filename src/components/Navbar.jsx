@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Moon } from "react-bootstrap-icons";
+import PropTypes from "prop-types";
 
 const Navbar = ({ darkModeHandler }) => {
   return (
@@ -25,3 +26,7 @@ const Navbar = ({ darkModeHandler }) => {
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+  darkModeHandler: PropTypes.func,
+};

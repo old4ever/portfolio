@@ -45,7 +45,7 @@ function App() {
         itsDark();
         setDarkMode(true);
         localStorage.setItem("darkmode", JSON.stringify(true));
-
+        break;
       default:
         break;
     }
