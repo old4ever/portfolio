@@ -25,9 +25,27 @@ const LinksPage = () => {
               text={"Flixx"}
               buttonDark={false}
             />
-            <LinkCard button={{ exists: true, link: "" }} />
-            <LinkCard button={{ exists: true, link: "" }} />
-            <LinkCard button={{ exists: true, link: "" }} />
+            <LinkCard
+              text={"Github Finder"}
+              button={{
+                exists: true,
+                link: "https://github-finder.old4ever.cyou/",
+              }}
+            />
+            <LinkCard
+              text={"Shopping List"}
+              button={{
+                exists: true,
+                link: "https://shopping-list.old4ever.cyou/",
+              }}
+            />
+            <LinkCard
+              text={"Chirp"}
+              button={{
+                exists: true,
+                link: "https://chirp.old4ever.cyou/",
+              }}
+            />
             <LinkCard
               doubled={true}
               text={"Tracalorie"}

@@ -13,11 +13,12 @@ const LinkCard = ({ doubled, vertical, button, img, text, buttonDark }) => {
     buttonColor = " fill-black dark:fill-white";
   }
 
-  if (!text) {
-    text = `This is a ${doubled ? "doubled" : ""} ${
-      vertical ? "vertical" : ""
-    } card`;
-  }
+  // if (!text) {
+  //   text = `This is a ${doubled ? "doubled" : ""} ${
+  //     vertical ? "vertical" : ""
+  //   } card`;
+  // }
+
   const images = {
     flixx: [
       "bg-flixx-small sm:bg-flixx-medium lg:bg-flixx-large xl:bg-flixx-big",
@@ -26,7 +27,7 @@ const LinkCard = ({ doubled, vertical, button, img, text, buttonDark }) => {
 
   return (
     <div
-      className={`relative cursor-pointer rounded-xl border-2 dark:border-slate-400/10 border-slate-900/40 bg-neutral-100 p-4 dark:bg-neutral-900 dark:hover:border-slate-100/20  ${
+      className={`flex justify-center items-center relative cursor-pointer rounded-xl border-2 dark:border-slate-400/10 border-slate-900/40 bg-neutral-100 p-4 dark:bg-neutral-900 dark:hover:border-slate-100/20  ${
         doubled ? "col-span-3 xl:col-span-2" : "col-span-3 sm:col-span-1"
       } ${
         vertical ? "row-span-2 xl:row-span-4 " : "row-span-1 xl:row-span-2 "
@@ -37,7 +38,9 @@ const LinkCard = ({ doubled, vertical, button, img, text, buttonDark }) => {
         }
       }}
     >
-      <div className="absolute bottom-0 left-0">{images[img] ? "" : text}</div>
+      {/* <div className="absolute bottom-0 left-0"> */}
+      {/* <div className="">{images[img] ? "" : <span>{text}</span>}</div> */}
+      <span className="">{images[img] ? "" : text}</span>
 
       {button.exists && (
         <button
