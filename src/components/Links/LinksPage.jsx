@@ -20,7 +20,7 @@ const LinksPage = () => {
             <LinkCard
               doubled={true}
               vertical={true}
-              button={{ exists: true, link: "https://flixx.old4ever.cyou" }}
+              button={{ exists: true, link: "https://flixx.dmytros.dev" }}
               img={"flixx"}
               text={"Flixx"}
               buttonDark={false}
@@ -29,21 +29,21 @@ const LinksPage = () => {
               text={"Github Finder"}
               button={{
                 exists: true,
-                link: "https://github-finder.old4ever.cyou/",
+                link: "https://github-finder.dmytros.dev/",
               }}
             />
             <LinkCard
               text={"Shopping List"}
               button={{
                 exists: true,
-                link: "https://shopping-list.old4ever.cyou/",
+                link: "https://shopping-list.dmytros.dev/",
               }}
             />
             <LinkCard
               text={"Chirp"}
               button={{
                 exists: true,
-                link: "https://chirp.old4ever.cyou/",
+                link: "https://chirp.dmytros.dev/",
               }}
             />
             <LinkCard
@@ -51,7 +51,7 @@ const LinksPage = () => {
               text={"Tracalorie"}
               button={{
                 exists: true,
-                link: "https://tracalorie.old4ever.cyou",
+                link: "https://tracalorie.dmytros.dev",
               }}
             />
           </div>

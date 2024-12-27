@@ -92,7 +92,7 @@ const AboutContainer = ({ title, text }) => {
           GitHub
         </a>
         , or drop me an email at{" "}
-        <a className="underline-offset-[0.25em] text-blue-500 underline" href="mailto:contact@old4ever.cyou">contact@old4ever.cyou</a>.
+        <a className="underline-offset-[0.25em] text-blue-500 underline" href="mailto:contact@dmytros.dev">contact@dmytros.dev</a>.
       </p>
       <p>
         Thank you for visiting my portfolio, and I look forward to the
